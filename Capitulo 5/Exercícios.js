@@ -17,7 +17,7 @@ function manipulacaoObjeto()
     estudante.semestre = 'Terceiro';
     console.log(estudante.semestre);
 }
-function ManipulacaoArray()
+function manipulacaoArray()
 {
     let frutas = ["Maçã","Pêra","Uva"];
     console.log(frutas);
@@ -30,11 +30,10 @@ function ManipulacaoArray()
 }
 function interacaoArray()
 {
-    let numeros ={1,3,5,7,9};
-    function expo2(n)
+    let numeros =[1,3,5,7,9];
+    let quadrados = numeros.map(function expo(numero)
     {
-        return n*n;
-    }
-    let quadrados = numeros.map(expo2(numeros));
+    return numero*numero;
+    });
     console.log(quadrados);
 }
