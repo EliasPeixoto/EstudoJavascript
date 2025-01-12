@@ -16,5 +16,11 @@ meuFormulario.addEventListener("submit",(e)=>{
     {
         alert("Nome enviado com sucesso.");
     }
+    if(!(email.value.includes("@") && email.value.includes("."))
+    {
+        alert("Por favor, insira um e-mail valido");
+    }
+        
+    
 })
 
