@@ -8,35 +8,36 @@ let botaoEnviar = document.getElementById("botaoEnviar");
 let mensagemRetorno = document.getElementById("mensagemRetorno");
 let mensagem = "";
 
-botaoEnviar.addEventListener("onclick",(e)=>{
+function verificarDados (event)
+{
+    event.preventDefault();
+    if(nome.value ==="")
+        {
+            alert("Por Favor, insira o seu nome.");
+            return false;
+        }
+        else
+        {
+            alert("Nome enviado com sucesso.");
+        }
+        if(!(email.value.includes("@") && email.value.includes(".")))
+        {
+            alert("Por favor, insira um e-mail valido");
+            return false;
+        }
+        else
+        {
+    
+        }
+        mensagemRetorno.innerHTML = "Teste!!!"
+        mensagemRetorno.classList.remove("esconder");
+        mensagemRetorno.classList.add("mostrar");
+        mensagemRetorno.classList.add("sucessoEnvio");
+}
+    botaoEnviar.addEventListener("onclick",(e)=>{
     e.preventDefault();
     meuFormulario.dispatchEvent("submit");
 })
 
-meuFormulario.addEventListener("submit",(e)=>{
-
-    e.preventDefault();
-    if(nome.value ==="")
-    {
-        alert("Por Favor, insira o seu nome.");
-        return false;
-    }
-    else
-    {
-        alert("Nome enviado com sucesso.");
-    }
-    if(!(email.value.includes("@") && email.value.includes(".")))
-    {
-        alert("Por favor, insira um e-mail valido");
-        return false;
-    }
-    else
-    {
-
-    }
-    mensagemRetorno.innerHTML = "Teste!!!"
-    mensagemRetorno.classList.remove("esconder");
-    mensagemRetorno.classList.add("mostrar");
-    mensagemRetorno.classList.add("sucessoEnvio");
-})
+meuFormulario.addEventListener("submit",verificarDados,false);
 
