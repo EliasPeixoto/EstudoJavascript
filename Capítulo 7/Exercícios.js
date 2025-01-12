@@ -4,10 +4,11 @@ let meuSelect = document.getElementById("meuSelect");
 let nome = document.getElementById("nome");
 let email = document.getElementById("email");
 let senha = document.getElemeentById("senha");
+let mensagemRetorno = document.getElementById("mensagemRetorno");
+let mensagem = "";
 
 meuFormulario.addEventListener("submit",(e)=>{
 
-    alert(String.fromCharCode(65), String.fromCharCode(91));
     e.preventDefault();
     if(nome.value ==="")
     {
@@ -21,7 +22,14 @@ meuFormulario.addEventListener("submit",(e)=>{
     if(!(email.value.includes("@") && email.value.includes(".")))
     {
         alert("Por favor, insira um e-mail valido");
+        return false;
     }
+    else
+    {
 
+    }
+    mensagemRetorno.innerHTML = "Teste!!!"
+    mensagemRetorno.classList.remove("esconder");
+    mensagemRetorno.classList.add("mostrar");
 })
 
