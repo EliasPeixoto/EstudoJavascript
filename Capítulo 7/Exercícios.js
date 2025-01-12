@@ -4,8 +4,14 @@ let meuSelect = document.getElementById("meuSelect");
 let nome = document.getElementById("nome");
 let email = document.getElementById("email");
 let senha = document.getElemeentById("senha");
+let botaoEnviar = document.getElementById("botaoEnviar");
 let mensagemRetorno = document.getElementById("mensagemRetorno");
 let mensagem = "";
+
+botaoEnviar.addEventListener("onclick",(e)=>{
+    e.preventDefault();
+    meuFormulario.dispatchEvent("submit");
+})
 
 meuFormulario.addEventListener("submit",(e)=>{
 
