@@ -31,5 +31,6 @@ meuFormulario.addEventListener("submit",(e)=>{
     mensagemRetorno.innerHTML = "Teste!!!"
     mensagemRetorno.classList.remove("esconder");
     mensagemRetorno.classList.add("mostrar");
+    mensagemRetorno.classList.add("sucessoEnvio");
 })
 
